@@ -70,6 +70,7 @@ class handler(BaseHTTPRequestHandler):
 
 try:
 	with HTTPServer(('localhost', 4444), handler) as server:
+		print('Server started on port 4444... \n Go to this URL: http://localhost:4444')
 		server.serve_forever()
 except KeyboardInterrupt:
 	pass
